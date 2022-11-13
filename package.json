@@ -1,5 +1,5 @@
 {
-  "author": "tinkermail.io",
+  "author": "sendstreak.com",
   "description": "In-memory cache with a self revalidating approach",
   "devDependencies": {
     "mocha": "10.0.0",
@@ -15,10 +15,10 @@
   ],
   "license": "Apache-2.0",
   "main": "./lib",
-  "name": "@tinkermail/revalidating-cache",
+  "name": "@sendstreak/revalidating-cache",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tinkermail/revalidating-cache.git"
+    "url": "https://github.com/sendstreak/revalidating-cache.git"
   },
   "scripts": {
     "build": "rm -rf ./lib && tsc",
@@ -26,5 +26,5 @@
     "test": "mocha"
   },
   "types": "./lib/index.d.ts",
-  "version": "0.9.1"
+  "version": "1.0.1"
 }

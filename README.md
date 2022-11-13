@@ -1,20 +1,20 @@
 # revalidating-cache
 
-In-memory cache for node.js with a self (re)validating approach. Originally implemented for [Tinkermail](https://www.tinkermail.io), but made available to the public.
+In-memory cache for node.js with a self (re)validating approach. Originally implemented for [SendStreak](https://www.sendstreak.com), but made available to the public.
 
 ## Installation
 
 This is a node.js package available through npmjs, so you can install it using the [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```console
-$ npm install @tinkermail/revalidating-cache
+$ npm install --save-exact @sendstreak/revalidating-cache
 ```
 
 ## Usage
 
 ```js
 // Import
-const { Cache } = require('@tinkermail/revalidating-cache');
+const { Cache } = require('@sendstreak/revalidating-cache');
 
 // ...
 
@@ -60,7 +60,7 @@ const user = await userCache.get('ab45d4398');
 /**
  * Or use the cache manager to get a reference to your cache first.
  */
-const { cacheManager } = require('@tinkermail/revalidating-cache');
+const { cacheManager } = require('@sendstreak/revalidating-cache');
 
 const userCache = cacheManager.get('USER_CACHE');
 const user = await userCache.get('ab45d4398');
