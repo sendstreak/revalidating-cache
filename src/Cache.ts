@@ -37,13 +37,14 @@ export default class Cache<T> {
      * to fetch it using the provided `validatorFn` and then automatically caches it.
      *
      * @param key The key of the entry to be retrieved.
+     * @param forceValidation If `true`, the entry will be revalidated forcefully before it is returned. Defaults to `false`.
      * @returns T
      */
-    public async get(key: string): Promise<T | undefined> {
+    public async get(key: string, forceValidation = false): Promise<T | undefined> {
         let cacheRecord = this.cacheRecords[ key ];
         const now = Date.now();
 
-        if (cacheRecord === undefined || now > cacheRecord.validUntilMs) {
+        if (forceValidation === true || cacheRecord === undefined || now > cacheRecord.validUntilMs) {
             delete this.cacheRecords[ key ];
 
             let validationInFlight = this.validationsInFlight[ key ];
